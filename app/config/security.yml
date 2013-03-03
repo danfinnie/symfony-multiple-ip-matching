@@ -39,5 +39,5 @@ security:
             #    realm: "Secured Demo Area"
 
     access_control:
-        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: ["127.0.0.1", "fe80::1", "::1"] }
+        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: "192.168.1.11" }
         - { path: ^/, roles: ROLE_NO_ACCESS }
