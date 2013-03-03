@@ -13,6 +13,7 @@ $kernel = new AppKernel('dev', true);
 $kernel->loadClassCache();
 Request::enableHttpMethodParameterOverride();
 $request = Request::createFromGlobals();
+$request->setTrustedProxies(array("192.168.1.11"));
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
